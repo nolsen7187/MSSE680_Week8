@@ -24,3 +24,16 @@ C:\Users\NOLSEN\Source\Repos\MSSE680_Week7\FFR\WebApp\bin\EntityFramework.xml
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week7\FFR\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week7\FFR\WebApp\obj\Debug\WebApp.dll
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week7\FFR\WebApp\obj\Debug\WebApp.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\WebApp\bin\WebApp.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\WebApp\bin\WebApp.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\WebApp\bin\BusinessLayer.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\WebApp\bin\FFR.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\WebApp\bin\Service.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\WebApp\bin\EntityFramework.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\WebApp\bin\BusinessLayer.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\WebApp\bin\FFR.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\WebApp\bin\Service.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\WebApp\bin\EntityFramework.xml
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\WebApp\obj\Debug\WebApp.csprojResolveAssemblyReference.cache
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\WebApp\obj\Debug\WebApp.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\WebApp\obj\Debug\WebApp.pdb

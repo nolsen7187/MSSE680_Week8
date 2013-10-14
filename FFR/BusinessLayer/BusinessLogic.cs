@@ -27,7 +27,7 @@ namespace BusinessLayer
             this.localxmlFileName = xmlFileName;
         }
 
-        public Facade(Customer Class, int ActionType)
+        public Facade(Customer Class, int ActionType) 
         {
             this.lclClass = Class;
             this.lclActionType = ActionType;

@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
-using PresentationWebForms;
+using DAL;
 
 
-namespace PresentationWebForms.Models
+namespace DAL
 {
-    public class DataInitializer : DropCreateDatabaseIfModelChanges<DataContext>
+    public class DataInitializer : DropCreateDatabaseIfModelChanges<FFREntities>
     {
-        protected override void Seed(DataContext context)
+        protected override void Seed(FFREntities context)
         {
             GetCustomers().ForEach(c => context.Customers.Add(c));
             GetEmployees().ForEach(e => context.Employees.Add(e));
@@ -15,7 +15,7 @@ namespace PresentationWebForms.Models
             GetItemCategories().ForEach(ic => context.ItemCategories.Add(ic));
             GetSalesHeader().ForEach(sh => context.SalesHeaders.Add(sh));
             GetSalesItems().ForEach(si => context.SalesItems.Add(si));
-            GetWebUsers().ForEach(w => context.WebUsers.Add(w));
+            GetWebUsers().ForEach(w => context.WebUserTables.Add(w));
 
         }
         private static List<Customer> GetCustomers()

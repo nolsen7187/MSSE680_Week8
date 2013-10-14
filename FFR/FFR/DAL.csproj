@@ -57,6 +57,7 @@
     <Compile Include="Customer.cs">
       <DependentUpon>FFR.tt</DependentUpon>
     </Compile>
+    <Compile Include="DataInitializer.cs" />
     <Compile Include="Employee.cs">
       <DependentUpon>FFR.tt</DependentUpon>
     </Compile>
