@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.ModelBinding;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using PresentationWebForms.Models;
+using DAL;
 
 namespace PresentationWebForms
 {
@@ -17,7 +17,7 @@ namespace PresentationWebForms
         }
         public IQueryable<Item> GetSingleItem([QueryString("ItemId")]int? ItemId)
         {
-            var _db = new PresentationWebForms.Models.DataContext();
+            var _db = new FFREntities();
             IQueryable<Item> query = _db.Items;
             if (ItemId.HasValue && ItemId > 0)
             {

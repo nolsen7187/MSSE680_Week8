@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
-    <asp:FormView ID="itemDetails" runat="server" ItemType="PresentationWebForms.Models.Item" SelectMethod ="GetSingleItem" RenderOuterTable="false">
+    <asp:FormView ID="itemDetails" runat="server" ItemType="DAL.Item" SelectMethod ="GetSingleItem" RenderOuterTable="false">
         <ItemTemplate>
             <div>
                 <h1><%#:Item.ItemName %></h1>

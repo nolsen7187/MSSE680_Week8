@@ -83,7 +83,7 @@
         
                 <section style="text-align: center; background-color: #fff">
                     <asp:ListView ID="categoryList"  
-                        ItemType="PresentationWebForms.Models.ItemCategory" 
+                        ItemType="DAL.ItemCategory" 
                         runat="server"
                         SelectMethod="GetItemCategories" >
                         <ItemTemplate>

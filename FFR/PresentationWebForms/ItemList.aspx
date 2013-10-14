@@ -12,7 +12,7 @@
                     <ul> 
                         <asp:ListView ID="itemList" runat="server"
                             DataKeyNames="ItemId"
-                            GroupItemCount="3" ItemType="PresentationWebForms.Models.Item" SelectMethod="GetItems">
+                            GroupItemCount="3" ItemType="DAL.Item" SelectMethod="GetItems">
                             <EmptyDataTemplate>      
                                 <table id="Table1" runat="server">        
                                     <tr>          

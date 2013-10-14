@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using PresentationWebForms.Models;
+using DAL;
 
 namespace PresentationWebForms
 {
@@ -72,7 +72,7 @@ namespace PresentationWebForms
         }
         public IQueryable<ItemCategory> GetItemCategories()
         {
-            var db = new PresentationWebForms.Models.DataContext();
+            var db = new FFREntities();
             IQueryable<ItemCategory> query = db.ItemCategories;
             return query;
 
