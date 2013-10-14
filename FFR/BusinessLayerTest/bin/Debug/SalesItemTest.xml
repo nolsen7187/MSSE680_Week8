@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--This Xml is generated when a new Item is added on FFR's site-->
+<SalesItem>
+  <ObjectType>SalesItem</ObjectType>
+  <ActionType>1</ActionType>
+  <SalesId>1</SalesId>
+  <ItemId>1</ItemId>
+  <ItemName>Business FP Green Turbo</ItemName>
+  <Qty>1</Qty>
+  <LineAmount>20.00</LineAmount>
+  <Price>20.00</Price>
+</SalesItem>

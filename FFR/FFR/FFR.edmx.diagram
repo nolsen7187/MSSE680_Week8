@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fd8e0552597a4628ba6b94d07a02ed31" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="FFRModel.Customer" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="FFRModel.SalesHeader" Width="1.5" PointX="3" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="FFRModel.FK_SalesHeader_Customer" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="FFRModel.Item" Width="1.5" PointX="6.6104171977426933" PointY="2.3455028991892481" />
+        <EntityTypeShape EntityType="FFRModel.SalesItem" Width="1.5" PointX="2.0930529153407798" PointY="7.0210509034903028" />
+        <AssociationConnector Association="FFRModel.FK_SalesItems_Items" />
+        <AssociationConnector Association="FFRModel.FK_SalesItems_SalesHeaders" />
+        <EntityTypeShape EntityType="FFRModel.Employee" Width="1.5" PointX="10.234195376855412" PointY="10.678202276433913" />
+        <EntityTypeShape EntityType="FFRModel.WebUserTable" Width="1.5" PointX="8.9071928062044066" PointY="8.646241981837079" />
+        <AssociationConnector Association="FFRModel.FK_WebUserTable_Customers" />
+        <AssociationConnector Association="FFRModel.FK_WebUserTable_Employees" />
+        <EntityTypeShape EntityType="FFRModel.ItemCategory" Width="1.5" PointX="0.24395916994845457" PointY="1.6994167872236188" />
+        <AssociationConnector Association="FFRModel.FK_Items_ItemCategory" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

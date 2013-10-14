@@ -1,0 +1,16 @@
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week6\FFR\FFR\bin\Release\FFR.dll.config
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week6\FFR\FFR\bin\Release\FFR.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week6\FFR\FFR\bin\Release\FFR.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week6\FFR\FFR\bin\Release\EntityFramework.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week6\FFR\FFR\bin\Release\EntityFramework.xml
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week6\FFR\FFR\obj\Release\DAL.csprojResolveAssemblyReference.cache
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week6\FFR\FFR\obj\Release\FFR.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week6\FFR\FFR\obj\Release\FFR.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week7\FFR\FFR\bin\Release\FFR.dll.config
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week7\FFR\FFR\bin\Release\FFR.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week7\FFR\FFR\bin\Release\FFR.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week7\FFR\FFR\bin\Release\EntityFramework.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week7\FFR\FFR\bin\Release\EntityFramework.xml
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week7\FFR\FFR\obj\Release\DAL.csprojResolveAssemblyReference.cache
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week7\FFR\FFR\obj\Release\FFR.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week7\FFR\FFR\obj\Release\FFR.pdb

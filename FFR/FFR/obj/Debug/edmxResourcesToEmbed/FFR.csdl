@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FFRModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="FFREntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Customers" EntityType="FFRModel.Customer" />
+    <EntitySet Name="SalesHeaders" EntityType="FFRModel.SalesHeader" />
+    <AssociationSet Name="FK_SalesHeader_Customer" Association="FFRModel.FK_SalesHeader_Customer">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="SalesHeader" EntitySet="SalesHeaders" />
+    </AssociationSet>
+    <EntitySet Name="Items" EntityType="FFRModel.Item" />
+    <EntitySet Name="SalesItems" EntityType="FFRModel.SalesItem" />
+    <AssociationSet Name="FK_SalesItems_Items" Association="FFRModel.FK_SalesItems_Items">
+      <End Role="Item" EntitySet="Items" />
+      <End Role="SalesItem" EntitySet="SalesItems" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SalesItems_SalesHeaders" Association="FFRModel.FK_SalesItems_SalesHeaders">
+      <End Role="SalesHeader" EntitySet="SalesHeaders" />
+      <End Role="SalesItem" EntitySet="SalesItems" />
+    </AssociationSet>
+    <EntitySet Name="Employees" EntityType="FFRModel.Employee" />
+    <EntitySet Name="WebUserTables" EntityType="FFRModel.WebUserTable" />
+    <AssociationSet Name="FK_WebUserTable_Customers" Association="FFRModel.FK_WebUserTable_Customers">
+      <End Role="Customer" EntitySet="Customers" />
+      <End Role="WebUserTable" EntitySet="WebUserTables" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WebUserTable_Employees" Association="FFRModel.FK_WebUserTable_Employees">
+      <End Role="Employee" EntitySet="Employees" />
+      <End Role="WebUserTable" EntitySet="WebUserTables" />
+    </AssociationSet>
+    <EntitySet Name="ItemCategories" EntityType="FFRModel.ItemCategory" />
+    <AssociationSet Name="FK_Items_ItemCategory" Association="FFRModel.FK_Items_ItemCategory">
+      <End Role="ItemCategory" EntitySet="ItemCategories" />
+      <End Role="Item" EntitySet="Items" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="CustomerId" />
+    </Key>
+    <Property Name="CustomerId" Type="Int32" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="200" Unicode="false" FixedLength="false" />
+    <Property Name="City" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+    <Property Name="State" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+    <Property Name="Zip" Type="String" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Suite" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Phone" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="SalesHeaders" Relationship="FFRModel.FK_SalesHeader_Customer" FromRole="Customer" ToRole="SalesHeader" />
+    <Property Type="String" Name="Street" MaxLength="100" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="WebUserTables" Relationship="FFRModel.FK_WebUserTable_Customers" FromRole="Customer" ToRole="WebUserTable" />
+  </EntityType>
+  <EntityType Name="SalesHeader">
+    <Key>
+      <PropertyRef Name="SalesId" />
+    </Key>
+    <Property Name="SalesId" Type="Int32" Nullable="false" />
+    <Property Name="CustomerId" Type="Int32" />
+    <Property Name="OrderSalesBalance" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="OrderTaxAmount" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="OrderTotal" Type="Decimal" Precision="10" Scale="0" />
+    <Property Name="SalesStatus" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+    <NavigationProperty Name="Customer" Relationship="FFRModel.FK_SalesHeader_Customer" FromRole="SalesHeader" ToRole="Customer" />
+    <NavigationProperty Name="SalesItems" Relationship="FFRModel.FK_SalesItems_SalesHeaders" FromRole="SalesHeader" ToRole="SalesItem" />
+  </EntityType>
+  <Association Name="FK_SalesHeader_Customer">
+    <End Role="Customer" Type="FFRModel.Customer" Multiplicity="0..1" />
+    <End Role="SalesHeader" Type="FFRModel.SalesHeader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="SalesHeader">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="ItemId" />
+    </Key>
+    <Property Type="Int32" Name="ItemId" Nullable="false" />
+    <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="Int32" Name="QuantityAvailable" />
+    <Property Type="Decimal" Name="ItemCost" Precision="18" Scale="0" />
+    <Property Type="Decimal" Name="Price" Precision="18" Scale="0" />
+    <NavigationProperty Name="SalesItems" Relationship="FFRModel.FK_SalesItems_Items" FromRole="Item" ToRole="SalesItem" />
+    <Property Type="Int32" Name="ItemCategoryId" />
+    <NavigationProperty Name="ItemCategory" Relationship="FFRModel.FK_Items_ItemCategory" FromRole="Item" ToRole="ItemCategory" />
+  </EntityType>
+  <EntityType Name="SalesItem">
+    <Key>
+      <PropertyRef Name="SalesItemTransId" />
+    </Key>
+    <Property Type="Int32" Name="SalesItemTransId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="SalesId" Nullable="false" />
+    <Property Type="Int32" Name="ItemId" Nullable="false" />
+    <Property Type="Int32" Name="Qty" />
+    <Property Type="Decimal" Name="Price" Precision="19" Scale="4" />
+    <Property Type="Decimal" Name="LineAmount" Precision="19" Scale="4" />
+    <Property Type="String" Name="ItemName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Item" Relationship="FFRModel.FK_SalesItems_Items" FromRole="SalesItem" ToRole="Item" />
+    <NavigationProperty Name="SalesHeader" Relationship="FFRModel.FK_SalesItems_SalesHeaders" FromRole="SalesItem" ToRole="SalesHeader" />
+  </EntityType>
+  <Association Name="FK_SalesItems_Items">
+    <End Type="FFRModel.Item" Role="Item" Multiplicity="1" />
+    <End Type="FFRModel.SalesItem" Role="SalesItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Item">
+        <PropertyRef Name="ItemId" />
+      </Principal>
+      <Dependent Role="SalesItem">
+        <PropertyRef Name="ItemId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SalesItems_SalesHeaders">
+    <End Type="FFRModel.SalesHeader" Role="SalesHeader" Multiplicity="1" />
+    <End Type="FFRModel.SalesItem" Role="SalesItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesHeader">
+        <PropertyRef Name="SalesId" />
+      </Principal>
+      <Dependent Role="SalesItem">
+        <PropertyRef Name="SalesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Type="Int32" Name="EmployeeId" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="EmployeeFirstName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EmployeeLastName" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="EmployeePhone" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="Employeetype" MaxLength="10" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="WebUserTables" Relationship="FFRModel.FK_WebUserTable_Employees" FromRole="Employee" ToRole="WebUserTable" />
+  </EntityType>
+  <EntityType Name="WebUserTable">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Password" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="Int32" Name="CustomerId" />
+    <Property Type="Int32" Name="EmployeeId" />
+    <NavigationProperty Name="Customer" Relationship="FFRModel.FK_WebUserTable_Customers" FromRole="WebUserTable" ToRole="Customer" />
+    <NavigationProperty Name="Employee" Relationship="FFRModel.FK_WebUserTable_Employees" FromRole="WebUserTable" ToRole="Employee" />
+  </EntityType>
+  <Association Name="FK_WebUserTable_Customers">
+    <End Type="FFRModel.Customer" Role="Customer" Multiplicity="0..1" />
+    <End Type="FFRModel.WebUserTable" Role="WebUserTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Customer">
+        <PropertyRef Name="CustomerId" />
+      </Principal>
+      <Dependent Role="WebUserTable">
+        <PropertyRef Name="CustomerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WebUserTable_Employees">
+    <End Type="FFRModel.Employee" Role="Employee" Multiplicity="0..1" />
+    <End Type="FFRModel.WebUserTable" Role="WebUserTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="EmployeeId" />
+      </Principal>
+      <Dependent Role="WebUserTable">
+        <PropertyRef Name="EmployeeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ItemCategory">
+    <Key>
+      <PropertyRef Name="ItemCategoryId" />
+    </Key>
+    <Property Type="Int32" Name="ItemCategoryId" Nullable="false" />
+    <Property Type="String" Name="Category" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Items" Relationship="FFRModel.FK_Items_ItemCategory" FromRole="ItemCategory" ToRole="Item" />
+  </EntityType>
+  <Association Name="FK_Items_ItemCategory">
+    <End Type="FFRModel.ItemCategory" Role="ItemCategory" Multiplicity="0..1" />
+    <End Type="FFRModel.Item" Role="Item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ItemCategory">
+        <PropertyRef Name="ItemCategoryId" />
+      </Principal>
+      <Dependent Role="Item">
+        <PropertyRef Name="ItemCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
