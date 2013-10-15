@@ -111,6 +111,7 @@ CREATE TABLE [dbo].[SalesItems] (
     [SalesItemTransId] int IDENTITY(1,1) NOT NULL,
     [SalesId] int  NOT NULL,
     [ItemId] int  NOT NULL,
+	[CartId] string NULL,
     [Qty] int  NULL,
     [Price] decimal(19,4)  NULL,
     [LineAmount] decimal(19,4)  NULL,
