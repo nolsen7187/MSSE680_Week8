@@ -190,6 +190,9 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="AdminItemCategory.aspx" />
+    <Content Include="AdminItem.aspx" />
+    <Content Include="EmployeeRegistration.aspx" />
     <Content Include="CustomerRegistration.aspx" />
     <Content Include="Images\logo.jpg" />
     <Content Include="Images\newlogo.jpg" />
@@ -305,6 +308,27 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminItemCategory.aspx.cs">
+      <DependentUpon>AdminItemCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminItemCategory.aspx.designer.cs">
+      <DependentUpon>AdminItemCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminItem.aspx.cs">
+      <DependentUpon>AdminItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminItem.aspx.designer.cs">
+      <DependentUpon>AdminItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeRegistration.aspx.cs">
+      <DependentUpon>EmployeeRegistration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeRegistration.aspx.designer.cs">
+      <DependentUpon>EmployeeRegistration.aspx</DependentUpon>
     </Compile>
     <Compile Include="CustomerRegistration.aspx.cs">
       <DependentUpon>CustomerRegistration.aspx</DependentUpon>
