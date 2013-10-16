@@ -18,7 +18,7 @@ namespace PresentationWebForms
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterOpenAuth();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            Database.SetInitializer(new DataInitializer());
+            //Database.SetInitializer(new DataInitializer());
         }
 
         void Application_End(object sender, EventArgs e)

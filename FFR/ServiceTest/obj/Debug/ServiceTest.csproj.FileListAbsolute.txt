@@ -50,3 +50,16 @@ C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\ServiceTest\bin\Debug\EntityFrame
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\ServiceTest\obj\Debug\ServiceTest.csprojResolveAssemblyReference.cache
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\ServiceTest\obj\Debug\ServiceTest.dll
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\ServiceTest\obj\Debug\ServiceTest.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\ServiceTest\bin\Debug\app.config
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\ServiceTest\bin\Debug\ServiceTest.dll.config
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\ServiceTest\bin\Debug\ServiceTest.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\ServiceTest\bin\Debug\ServiceTest.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\ServiceTest\bin\Debug\FFR.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\ServiceTest\bin\Debug\Service.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\ServiceTest\bin\Debug\EntityFramework.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\ServiceTest\bin\Debug\FFR.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\ServiceTest\bin\Debug\Service.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\ServiceTest\bin\Debug\EntityFramework.xml
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\ServiceTest\obj\Debug\ServiceTest.csprojResolveAssemblyReference.cache
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\ServiceTest\obj\Debug\ServiceTest.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\ServiceTest\obj\Debug\ServiceTest.pdb

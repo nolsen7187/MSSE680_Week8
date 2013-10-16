@@ -30,3 +30,11 @@ C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\FFR\bin\Debug\EntityFramework.xml
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\FFR\obj\Debug\FFR.dll
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\FFR\obj\Debug\FFR.pdb
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\FFR\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\FFR\bin\Debug\FFR.dll.config
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\FFR\bin\Debug\FFR.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\FFR\bin\Debug\FFR.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\FFR\bin\Debug\EntityFramework.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\FFR\bin\Debug\EntityFramework.xml
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\FFR\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\FFR\obj\Debug\FFR.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\FFR\obj\Debug\FFR.pdb

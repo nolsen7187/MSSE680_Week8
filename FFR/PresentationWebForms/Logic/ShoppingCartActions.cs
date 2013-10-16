@@ -65,9 +65,15 @@ namespace PresentationWebForms.Logic
                     Guid tempCartId = Guid.NewGuid();
                     HttpContext.Current.Session[SalesIdSessionKey] = tempCartId.ToString();
                 }*/
+                
                 HttpContext.Current.Session[SalesIdSessionKey] = 1001;
+                var shoppingCartHeader = new SalesHeader();
+                shoppingCartHeader.SalesId = Convert.ToInt16(HttpContext.Current.Session[SalesIdSessionKey]);
+                shoppingCartHeader.CustomerId = 1;
+                _db.SalesHeaders.Add(shoppingCartHeader);
+                _db.SaveChanges();
             }
-            return Convert.ToInt16(HttpContext.Current.Session[SalesIdSessionKey]);
+            return 1;//Convert.ToInt16(HttpContext.Current.Session[SalesIdSessionKey]);
         }
 
         public List<SalesItem> GetSalesCartItems()

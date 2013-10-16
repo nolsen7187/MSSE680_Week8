@@ -44,3 +44,15 @@ C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\BusinessLayer\bin\Debug\EntityFra
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\NOLSEN\Source\Repos\MSSE680_Week8\FFR\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\BusinessLayer\bin\Debug\BusinessLayer.dll.config
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\BusinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\BusinessLayer\bin\Debug\FFR.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\BusinessLayer\bin\Debug\Service.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\BusinessLayer\bin\Debug\FFR.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\BusinessLayer\bin\Debug\Service.pdb
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\BusinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\NOLSEN\Source\Repos\MSSE680_Week82\FFR\BusinessLayer\obj\Debug\BusinessLayer.pdb

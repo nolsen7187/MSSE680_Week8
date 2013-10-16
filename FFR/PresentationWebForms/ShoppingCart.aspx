@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="FeaturedContent" runat="server">
     <div id="ShoppingCartTitle" runat="server" class="ContentHead"><h1>Shopping Cart</h1></div>
     <asp:GridView ID="CartList" runat="server" AutoGenerateColumns="False" ShowFooter="True" GridLines="Vertical" CellPadding="4"
-        ItemType="DAL.SalesItems" CssClass="CartListItem" SelectMethod="GetShoppingCartItems" Width="600">              
+        ItemType="DAL.SalesItem" CssClass="CartListItem" SelectMethod="GetShoppingCartItems" Width="600">              
         <AlternatingRowStyle CssClass="CartListItemAlt" />
         <Columns>
         <asp:BoundField DataField="ItemId" HeaderText="ID" SortExpression="ItemId" />        
@@ -17,7 +17,7 @@
         </asp:TemplateField>    
         <asp:TemplateField HeaderText="Item Total">            
                 <ItemTemplate>
-                    <%#: String.Format("{0:c}", ((Convert.ToDouble(Item.Qty)) *  Convert.ToDouble(Item.Product.Price)))%>
+                    <%#: String.Format("{0:c}", ((Convert.ToDouble(Item.Qty)) *  Convert.ToDouble(Item.Price)))%>
                 </ItemTemplate>        
         </asp:TemplateField> 
         <asp:TemplateField HeaderText="Remove Item">            
