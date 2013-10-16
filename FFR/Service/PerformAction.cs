@@ -14,16 +14,29 @@ namespace Service
     {
         private static Int16 actionType;
         public Customer localCust;
+        public Type ClassType;
+        
+        public Object PassedClass;
+     
+
+        public static T bar<T>(T obj) where T : class
+        {
+            var type = obj.GetType();
+            return Activator.CreateInstance(type) as T;
+        }
         public bool Action(Object Class, int ActionType)
         {
             //getActionType(localXmlWriter, xmlFileName);
            dynamic ClassObject = Class;
+            this.PassedClass = Class;
            //var ClassType = Convert.ChangeType(Class, ClassObject);
            //var oo = Convert.ChangeType(Class, System.);
-           Type ClassType = ClassObject.GetType();
-           Activator.CreateInstance(ClassObject);
+           var ClassType = bar<Object>(PassedClass);
+           
+                  
             if (Class != null)
             {
+                var typ = PassedClass.GetType();
                 //localCust = Class;
                 var Repo = CRUDRepositoryConcreteFactory.CRUD<Customer>();
                 //var Repo = CRUDRepositoryConcreteFactory.CRUD<Customer>();
