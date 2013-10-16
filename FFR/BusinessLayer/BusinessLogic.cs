@@ -23,13 +23,20 @@ namespace BusinessLayer
         private XmlWriter localXMLWriter;
         private String localxmlFileName;
         private Object lclObjectClass;
+        private dynamic ClassObject;
 
         public Facade(XmlWriter xmlWriter, string xmlFileName)
         {
             this.localXMLWriter = xmlWriter;
             this.localxmlFileName = xmlFileName;
         }
-
+        public Facade(Object Object, int ActionType)
+        {
+            //this.ClassObject = Object;       
+            this.lclObjectClass = Object;
+            this.lclActionType = ActionType;
+        }
+/*
         public Facade(Customer Class, int ActionType) 
         {
             this.lclCustomerClass = Class;
@@ -54,7 +61,7 @@ namespace BusinessLayer
         {
             this.lclObjectClass = Class;
             //this.lclActionType = ActionType;
-        }
+        }*/
         public void ProcessRequest()
         {
             if (localXMLWriter != null)
@@ -65,7 +72,7 @@ namespace BusinessLayer
                 this.localXMLWriter.Dispose();
                 this.localxmlFileName = "";
             }
-            else if (lclCustomerClass != null)
+/*            else if (lclCustomerClass != null)
             {
                 performAction.Action(lclCustomerClass, lclActionType);
             }
@@ -81,10 +88,18 @@ namespace BusinessLayer
             {
                 performAction.Action(lclCustomerClass, lclActionType);
             }
+            else// if(ClassObject != null)
+            {
+                performAction.Action(ClassObject, lclActionType);
+            }*/
             else
             {
                 performAction.Action(lclObjectClass, lclActionType);
             }
+            /*else
+            {
+                performAction.Action(lclObjectClass, lclActionType);
+            }*/
         }
     }
 }

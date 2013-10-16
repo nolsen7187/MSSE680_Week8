@@ -30,10 +30,11 @@ namespace PresentationWebForms
             uICustomer.Phone = this.PhoneTextBox.Text;
             uICustomer.Email = this.EmailTextBox.Text;
 
-            //object Class = uICustomer;
+            object Class = uICustomer;
             int ActionType = 1;
 
-            Facade newFacade = new Facade(uICustomer, ActionType);
+            //Facade newFacade = new Facade(uICustomer, ActionType);
+            Facade newFacade = new Facade(Class, ActionType);
             newFacade.ProcessRequest();
 
             if (Page.IsValid)

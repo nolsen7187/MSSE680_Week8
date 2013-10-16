@@ -162,6 +162,7 @@ namespace DAL
             return GetBySpecificKey(KeyName, KeyVal);
         }
     }
+
     /// This is a generic inteface extending a class.
     public interface IDataRepository<T> where T : class
     {

@@ -38,7 +38,7 @@
         <tr>
             <td class="auto-style1">Employee Type:</td>
             <td class="auto-style2">
-                <asp:TextBox ID="EmailTextBox" runat="server" Width="275px"></asp:TextBox>
+                <asp:TextBox ID="EmployeeTypeTextBox" runat="server" Width="275px"></asp:TextBox>
             </td>
         </tr>
         <tr>

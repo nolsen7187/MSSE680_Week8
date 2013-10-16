@@ -17,22 +17,27 @@ namespace Service
         public bool Action(Object Class, int ActionType)
         {
             //getActionType(localXmlWriter, xmlFileName);
-
+           dynamic ClassObject = Class;
+           //var ClassType = Convert.ChangeType(Class, ClassObject);
+           //var oo = Convert.ChangeType(Class, System.);
+           Type ClassType = ClassObject.GetType();
+           Activator.CreateInstance(ClassObject);
             if (Class != null)
             {
                 //localCust = Class;
-                var Repo = CRUDRepositoryConcreteFactory.CRUD<Object>();
+                var Repo = CRUDRepositoryConcreteFactory.CRUD<Customer>();
+                //var Repo = CRUDRepositoryConcreteFactory.CRUD<Customer>();
                 switch (ActionType)
                 {
 
                     case 1://Create
-                        Repo.Create(Class);
+                        Repo.Create(ClassObject);
                         break;
                     case 2://Update
-                        Repo.Update(Class);
+                        Repo.Update(ClassObject);
                         break;
                     case 3://Delete
-                        Repo.Delete(Class);
+                        Repo.Delete(ClassObject);
                         break;
                     default:
                         break;

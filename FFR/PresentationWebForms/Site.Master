@@ -64,6 +64,7 @@
                     <li><a href="/Contact.aspx">Contact</a></li>
                     <li><a href="/ItemList.aspx">Products</a></li>
                     <li><a href="/CustomerRegistration.aspx">Customer Registration</a></li>
+                    <li><a href="/EmployeeRegistration.aspx">Admin</a></li>
                     </ul>
                 </nav>
             </div>

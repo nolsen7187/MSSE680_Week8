@@ -9,7 +9,7 @@ using BusinessLayer;
 
 namespace PresentationWebForms
 {
-    public partial class AdminItem : System.Web.UI.Page
+    public partial class EmployeeRegistration : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,26 +18,27 @@ namespace PresentationWebForms
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            Item uIItem = new Item();
+            Employee uIEmployee = new Employee();
 
-            uIItem.ItemName = this.ItemNameTextBox.Text;
-            uIItem.QuantityAvailable = Convert.ToInt16(this.QtyAvailTextBox.Text);
-            uIItem.ItemCost = Convert.ToDecimal(this.UnitCostTextBox.Text);
-            uIItem.Price = Convert.ToDecimal(this.PriceTextBox.Text);
-            uIItem.ItemCategoryId = Convert.ToInt16(this.CategoryTextBox.Text);            
-            //object Class = uICustomer;
+            uIEmployee.EmployeeFirstName = this.FirstNameTextBox.Text;
+            uIEmployee.EmployeeLastName = this.LastNameTextBox.Text;
+            uIEmployee.Employeetype = this.EmployeeTypeTextBox.Text;
+            uIEmployee.EmployeePhone = this.PhoneTextBox.Text;
+
+            object Class = uIEmployee;
             int ActionType = 1;
 
-            Facade newFacade = new Facade(uIItem, ActionType);
+            //Facade newFacade = new Facade(uIEmployee, ActionType);
+            Facade newFacade = new Facade(Class, ActionType);
             newFacade.ProcessRequest();
 
             if (Page.IsValid)
             {
-                SuccessLabel.Text = "You have successfully registered an Employee on the FFR's website";
+                SuccessLabel.Text = "You have successfully registered on the FFR's website";
             }
             else
             {
-                SuccessLabel.Text = "Failed to register an Employee on FFR's website, please verify you have entered all necessary information.";
+                SuccessLabel.Text = "Failed to registers on FFR's website, please verify you have entered all necessary information.";
             }
             //deploy project
             //CustomerManager cm = new CustomerManager();

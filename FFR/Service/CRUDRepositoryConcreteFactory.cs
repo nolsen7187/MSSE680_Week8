@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using System.Data.Entity;
 
 namespace Service
 {
@@ -14,6 +15,5 @@ namespace Service
             DataRepository<T> modifiedRepository = Activator.CreateInstance<DataRepository<T>>();
             return modifiedRepository;
         }
-
     }
 }
