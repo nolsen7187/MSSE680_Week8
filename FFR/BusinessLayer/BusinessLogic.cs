@@ -30,9 +30,9 @@ namespace BusinessLayer
             this.localXMLWriter = xmlWriter;
             this.localxmlFileName = xmlFileName;
         }
+        //This Facade is used for all domain classes.
         public Facade(Object Object, int ActionType)
-        {
-            //this.ClassObject = Object;       
+        {   
             this.lclObjectClass = Object;
             this.lclActionType = ActionType;
         }
@@ -64,6 +64,7 @@ namespace BusinessLayer
         }*/
         public void ProcessRequest()
         {
+            //Only kept this around for unit tests and XML experience
             if (localXMLWriter != null)
             {
                 instatiateCallerRequested.InstantiateCallerRequested(localXMLWriter, localxmlFileName);

@@ -13,79 +13,83 @@ namespace Service
     public class PerformAction
     {
         private static Int16 actionType;
-        public Customer localCust;
-        public Type ClassType;
-        
-        public Object PassedClass;
-     
+        private Customer localCust;
+        private Type ClassType;
 
-        public static T bar<T>(T obj) where T : class
+        /*public static T bar<T>(T obj) where T : class
         {
             var type = obj.GetType();
             return Activator.CreateInstance(type) as T;
-        }
-        public bool Action(Object Class, int ActionType)
+        }*/
+        //Method used for websites
+        public void Action(Object Class, int ActionType)
         {
             //getActionType(localXmlWriter, xmlFileName);
-           dynamic ClassObject = Class;
-            this.PassedClass = Class;
+            dynamic ClassObject = Class;
+            string ClassType = Class.ToString();
+            //this.PassedClass = Class;
            //var ClassType = Convert.ChangeType(Class, ClassObject);
            //var oo = Convert.ChangeType(Class, System.);
-           var ClassType = bar<Object>(PassedClass);
-           
-                  
-            if (Class != null)
+           //var ClassType = bar<Object>(PassedClass);
+            if (ClassType == "DAL.Customer")
             {
-                var typ = PassedClass.GetType();
-                //localCust = Class;
                 var Repo = CRUDRepositoryConcreteFactory.CRUD<Customer>();
-                //var Repo = CRUDRepositoryConcreteFactory.CRUD<Customer>();
-                switch (ActionType)
-                {
-
-                    case 1://Create
-                        Repo.Create(ClassObject);
-                        break;
-                    case 2://Update
-                        Repo.Update(ClassObject);
-                        break;
-                    case 3://Delete
-                        Repo.Delete(ClassObject);
-                        break;
-                    default:
-                        break;
-                }
+                Act(Repo, ClassObject, ActionType);               
             }
-            return true;
+            else if (ClassType == "DAL.Employee")
+            {
+                var Repo = CRUDRepositoryConcreteFactory.CRUD<Employee>();
+                Act(Repo, ClassObject, ActionType);
+            }
+            else if (ClassType == "DAL.Item")
+            {
+                var Repo = CRUDRepositoryConcreteFactory.CRUD<Item>();
+                Act(Repo, ClassObject, ActionType);
+            }
+            else if (ClassType == "DAL.ItemCategory")
+            {
+                var Repo = CRUDRepositoryConcreteFactory.CRUD<ItemCategory>();
+                Act(Repo, ClassObject, ActionType);
+            }
+            else if (ClassType == "DAL.SalesHeader")
+            {
+                var Repo = CRUDRepositoryConcreteFactory.CRUD<SalesHeader>();
+                Act(Repo, ClassObject, ActionType);
+            }
+            else if (ClassType == "DAL.SalesItem")
+            {
+                var Repo = CRUDRepositoryConcreteFactory.CRUD<SalesItem>();
+                Act(Repo, ClassObject, ActionType);
+            }
+            else if (ClassType == "DAL.WebUserTable")
+            {
+                var Repo = CRUDRepositoryConcreteFactory.CRUD<WebUserTable>();
+                Act(Repo, ClassObject, ActionType);
+            }
         }
-        public bool Action(Customer Class, int ActionType)
+        public void Act(IDataRepository DataRepo, dynamic ClassObject, int ActionType)
         {
-            //getActionType(localXmlWriter, xmlFileName);
-
-            if (Class != null)
+            switch (ActionType)
             {
-                localCust = Class;
-                var Repo = CRUDRepositoryConcreteFactory.CRUD<Customer>();
-                switch (ActionType)
-                {
 
-                    case 1://Create
-                        Repo.Create(localCust);
-                        break;
-                    case 2://Update
-                        Repo.Update(localCust);
-                        break;
-                    case 3://Delete
-                        Repo.Delete(localCust);
-                        break;
-                    default:
-                        break;
-                }
+                case 1://Create
+                    DataRepo.Create(ClassObject);
+                    break;
+                case 2://Update
+                    DataRepo.Update(ClassObject);
+                    break;
+                case 3://Delete
+                    DataRepo.Delete(ClassObject);
+                    break;
+                default:
+                    break;
             }
-            return true;
         }
+        //End of logic used by websites
 
-        public bool Action(XmlWriter localXmlWriter, string xmlFileName)
+
+
+        public void Action(XmlWriter localXmlWriter, string xmlFileName)
         {
             getActionType(localXmlWriter, xmlFileName);
 
@@ -107,82 +111,6 @@ namespace Service
                         break;
                 }
             }
-            else if (InstatiateCallerRequested.item != null)
-            {
-                var Repo = CRUDRepositoryConcreteFactory.CRUD<Item>();
-                switch (actionType)
-                {
-                    case 1://Create
-                        Repo.Create(InstatiateCallerRequested.item);
-
-                        break;
-                    case 2://Update
-                        Repo.Update(InstatiateCallerRequested.item);
-                        break;
-                    case 3://Delete
-                        var deleteItemRepo = Service.CRUDRepositoryConcreteFactory.CRUD<Item>();
-                        Item deleteItem = (from d in deleteItemRepo.GetAll() where d.ItemId == 3 select d).Single();
-                        deleteItemRepo.Delete(deleteItem);
-                        break;
-                    default:
-                        break;
-                }
-            }
-            else if (InstatiateCallerRequested.salesHeader != null)
-            {
-                var Repo = CRUDRepositoryConcreteFactory.CRUD<SalesHeader>();
-                switch (actionType)
-                {
-                    case 1://Create
-                        Repo.Create(InstatiateCallerRequested.salesHeader);
-                        break;
-                    case 2://Update
-                        Repo.Update(InstatiateCallerRequested.salesHeader);
-                        break;
-                    case 3://Delete
-                        Repo.Delete(InstatiateCallerRequested.salesHeader);
-                        break;
-                    default:
-                        break;
-                }
-            }
-            else if (InstatiateCallerRequested.salesItem != null)
-            {
-                var Repo = CRUDRepositoryConcreteFactory.CRUD<SalesItem>();
-                switch (actionType)
-                {
-                    case 1://Create
-                        Repo.Create(InstatiateCallerRequested.salesItem);
-                        break;
-                    case 2://Update
-                        Repo.Update(InstatiateCallerRequested.salesItem);
-                        break;
-                    case 3://Delete
-                        Repo.Delete(InstatiateCallerRequested.salesItem);
-                        break;
-                    default:
-                        break;
-                }
-            }
-            else if (InstatiateCallerRequested.employee != null)
-            {
-                var Repo = CRUDRepositoryConcreteFactory.CRUD<Employee>();
-                switch (actionType)
-                {
-                    case 1://Create
-                        Repo.Create(InstatiateCallerRequested.employee);
-                        break;
-                    case 2://Update
-                        Repo.Update(InstatiateCallerRequested.employee);
-                        break;
-                    case 3://Delete
-                        Repo.Delete(InstatiateCallerRequested.employee);
-                        break;
-                    default:
-                        break;
-                }
-            }
-            return false; ;
         }
         public static void getActionType(XmlWriter localXmlWriter, string xmlFileName)
         {
