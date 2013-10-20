@@ -193,6 +193,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="AdminItemCategory.aspx" />
     <Content Include="AdminList.aspx" />
+    <Content Include="AdminItem.aspx" />
     <Content Include="EmployeeRegistration.aspx" />
     <Content Include="CustomerRegistration.aspx" />
     <Content Include="Images\logo.jpg" />
@@ -330,6 +331,13 @@
     </Compile>
     <Compile Include="AdminList.aspx.designer.cs">
       <DependentUpon>AdminList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminItem.aspx.cs">
+      <DependentUpon>AdminItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminItem.aspx.designer.cs">
+      <DependentUpon>AdminItem.aspx</DependentUpon>
     </Compile>
     <Compile Include="EmployeeRegistration.aspx.cs">
       <DependentUpon>EmployeeRegistration.aspx</DependentUpon>

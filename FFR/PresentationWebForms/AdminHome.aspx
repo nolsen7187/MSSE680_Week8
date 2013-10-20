@@ -13,9 +13,7 @@
                         <br />
                         <a href="/AdminItemCategory.aspx">Item Category Maintenance</a>
                      <br />
-                        <a href="/AdminList.aspx">Item Maintenance</a>
-                     <br />
-                        <a href="/EmployeeRegistration.aspx">Sales Order Maintenance</a>
+                        <a href="/AdminItem.aspx">Item Maintenance</a>
                      <br />
                    <br />
                  </section>            

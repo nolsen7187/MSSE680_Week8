@@ -31,11 +31,11 @@ namespace PresentationWebForms
 
             if (Page.IsValid)
             {
-                SuccessLabel.Text = "You have successfully registered an Employee on the FFR's website";
+                SuccessLabel.Text = "You have successfully added an Item Category on the FFR's website";
             }
             else
             {
-                SuccessLabel.Text = "Failed to register an Employee on FFR's website, please verify you have entered all necessary information.";
+                SuccessLabel.Text = "Failed to add an Item Category on FFR's website, please verify you have entered all necessary information.";
             }
             //deploy project
             //CustomerManager cm = new CustomerManager();
