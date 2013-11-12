@@ -54,5 +54,12 @@
                 <asp:Label ID="SuccessLabel" runat="server" ForeColor="Red" Width="275px"></asp:Label>
             </td>
         </tr>
+         <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:FFREntities %>" SelectCommand="SELECT [ItemId] FROM [Items]"></asp:SqlDataSource>
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="ItemId" DataSourceID="SqlDataSource1">
+            <Columns>
+                <asp:BoundField DataField="ItemId" HeaderText="ItemId" InsertVisible="False" ReadOnly="True" SortExpression="ItemId"></asp:BoundField>
+            </Columns>
+        </asp:GridView>
+       
     </table>
 </asp:Content>
